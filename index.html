@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Bikini Terbaru - Trendy & Nyaman</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #ff4e79, #ff8a5c);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem 1rem;
+            text-align: center;
+            background: white;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff4e79;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #ff4e79;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 78, 121, 0.4);
+        }
+        
+        .cta-button:hover {
+            background: #ff3366;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 78, 121, 0.6);
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 3rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #ff4e79;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ff4e79;
+            margin-bottom: 1rem;
+        }
+        
+        .product-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .product-button {
+            display: block;
+            text-align: center;
+            background: #ff4e79;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .product-button:hover {
+            background: #ff3366;
+        }
+        
+        /* Features Section */
+        .features {
+            background: linear-gradient(135deg, #f8f8f8, #fff);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .feature-item {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #ff4e79;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .feature-text {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 3rem 1rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+        
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .author-title {
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #ff4e79, #ff8a5c);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .final-cta p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #ff4e79;
+        }
+        
+        .copyright {
+            opacity: 0.7;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BeachStyle</div>
+        <div class="tagline">Koleksi Bikini Terbaik untuk Musim Panas</div>
+    </header>
+    
+    <section class="hero">
+        <h1>Bikini Trendy & Nyaman untuk Liburanmu</h1>
+        <p>Temukan koleksi bikini terbaru dengan desain eksklusif dan bahan berkualitas tinggi. Cocok untuk pantai, kolam renang, atau liburan impianmu!</p>
+        <a href="https://shope.ee/your-affiliate-link" class="cta-button" id="main-cta">Lihat Koleksi Sekarang</a>
+    </section>
+    
+    <section class="products">
+        <h2 class="section-title">Produk Unggulan Kami</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bikini Hitam Polos">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Bikini Hitam Polos</h3>
+                    <div class="product-price">Rp 149.000</div>
+                    <p class="product-description">Bikini klasik warna hitam dengan bahan cepat kering dan nyaman dipakai seharian.</p>
+                    <a href="https://shope.ee/your-affiliate-link1" class="product-button">Beli Sekarang</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1552410260-0fd9b577afa6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bikini Floral">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Bikini Floral</h3>
+                    <div class="product-price">Rp 179.000</div>
+                    <p class="product-description">Desain bunga-bunga tropis yang cerah, sempurna untuk liburan pantai.</p>
+                    <a href="https://shope.ee/your-affiliate-link2" class="product-button">Beli Sekarang</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1590845947676-fa2576f401d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Bikini Sporty">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Bikini Sporty</h3>
+                    <div class="product-price">Rp 199.000</div>
+                    <p class="product-description">Desain sporty dengan dukungan maksimal, cocok untuk berenang atau aktivitas air.</p>
+                    <a href="https://shope.ee/your-affiliate-link3" class="product-button">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <h2 class="section-title">Kenapa Memilih Produk Kami?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 class="feature-title">Bahan Berkualitas</h3>
+                <p class="feature-text">Terbuat dari bahan cepat kering dan elastis yang nyaman dipakai seharian.</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <h3 class="feature-title">Desain Eksklusif</h3>
+                <p class="feature-text">Desain trendy dan eksklusif yang membuat Anda tampil percaya diri.</p>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3 class="feature-title">Pengiriman Cepat</h3>
+                <p class="feature-text">Pesanan dikirim dalam 1 hari kerja dengan packing rapi dan aman.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <h2 class="section-title">Apa Kata Pelanggan Kami?</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Bikini yang saya beli sangat nyaman dipakai dan bahannya berkualitas. Desainnya juga cantik banget!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Diana">
+                    </div>
+                    <div>
+                        <div class="author-name">Diana</div>
+                        <div class="author-title">Pelanggan Setia</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Pengiriman cepat dan produk sesuai gambar. Ukurannya pas dan nyaman untuk berenang."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Rina">
+                    </div>
+                    <div>
+                        <div class="author-name">Rina</div>
+                        <div class="author-title">Pecinta Pantai</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Saya sudah beli 3 model berbeda dan semuanya bagus. Rekomendasi banget untuk yang cari bikini berkualitas!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sari">
+                    </div>
+                    <div>
+                        <div class="author-name">Sari</div>
+                        <div class="author-title">Travel Blogger</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="final-cta">
+        <h2>Siap Memperbarui Koleksi Bikini Anda?</h2>
+        <p>Jangan lewatkan kesempatan untuk memiliki bikini berkualitas dengan harga terbaik. Pesan sekarang sebelum kehabisan!</p>
+        <a href="https://shope.ee/your-affiliate-link" class="cta-button">Beli Sekarang</a>
+    </section>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">Tentang Kami</a>
+            <a href="#">Kebijakan Privasi</a>
+            <a href="#">Syarat & Ketentuan</a>
+            <a href="#">Kontak</a>
+        </div>
+        <div class="copyright">© 2023 BeachStyle. All Rights Reserved.</div>
+    </footer>
+    
+    <script>
+        // Simple JavaScript for tracking clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track all affiliate link clicks
+            const affiliateLinks = document.querySelectorAll('a[href*="shope.ee"]');
+            
+            affiliateLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Here you can add tracking code like Google Analytics
+                    console.log('Affiliate link clicked:', this.href);
+                    // Or send data to your backend if you have one
+                });
+            });
+            
+            // Countdown timer for urgency (optional)
+            function updateCountdown() {
+                const now = new Date();
+                const endOfDay = new Date();
+                endOfDay.setHours(23, 59, 59, 999);
+                
+                const diff = endOfDay - now;
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                const countdownElement = document.getElementById('countdown');
+                if (countdownElement) {
+                    countdownElement.innerHTML = `Promo berakhir dalam: ${hours} jam ${minutes} menit ${seconds} detik`;
+                }
+            }
+            
+            // Uncomment to add countdown
+            // setInterval(updateCountdown, 1000);
+            // updateCountdown();
+            
+            // Scroll animation
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                const mainCta = document.getElementById('main-cta');
+                
+                if (scrollPosition > 500 && mainCta) {
+                    mainCta.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        mainCta.style.transform = 'scale(1)';
+                    }, 300);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
